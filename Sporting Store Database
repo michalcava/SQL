@@ -1,0 +1,31 @@
+CREATE TABLE sport_balls (id INTEGER PRIMARY KEY, sport TEXT, price INTEGER, available_in_store TEXT, customer_rating INTEGER);
+
+
+
+INSERT INTO sport_balls VALUES 
+(1, "basketball", 5, "Yes", 8.5),
+(2, "football", 20.95, "Yes", 9),
+(3, "bowlingball", 6, "Yes", 8),
+(4, "baseball", 23, "Yes",9),
+(5, "soccer", 15.95, "Yes", 8),
+(6, "volleyabll", 14.98, "Yes", 3),
+(7, "golf", 13, "Yes", 10),
+(8, "rugby", 82, "Yes", 6),
+(9, "water polo", 62, "Yes", 9),
+(10, "dodgeball", 12.99, "Yes", 2),
+(11, "kickball", 12.99, "Yes", 2),
+(12, "handball", 4.95, "Yes", 5),
+(13, "pickelball", 7.99, "Yes", 10),
+(14, "lacross", 13.99, "Yes", 7),
+(15, "ran out of ideas ball", 0.00, "No", 0);
+
+--display all items in datebase. 
+SELECT * FROM sport_balls;
+
+--display the database ordered by rating of 5 or less. 
+SELECT * FROM Sport_balls
+WHERE customer_rating <=5
+ORDER BY customer_rating desc;
+
+--mostexpensive item in database.
+SELECT MAX(price), sport  FROM sport_balls;
